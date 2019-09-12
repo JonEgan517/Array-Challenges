@@ -12,32 +12,40 @@ public class ArrayChallenges
 
 	private static void favoriteSweets() 
 	{
-		ArrayList<String> myArray = new ArrayList<String>();
 		Scanner stringInput = new Scanner(System.in);
-		System.out.println("How many favorite sweets.");
+		System.out.println("How many favorite sweets do you like.");
+		int numberOfSweets = stringInput.nextInt();
 		
-		while(stringInput.hasNextLine())
+		String[] myArray = new String[numberOfSweets]; 
+		
+		
+		for(int i = 0; i < numberOfSweets; i++)
 		{
-			myArray.add(stringInput.next());
+			System.out.println("Enter the name of the sweet " +(i+1));
+			myArray[i] = stringInput.next();
+		}
+		stringInput.close();
+		System.out.println("You favorite sweets are ");
+		for(int i = 0; i < numberOfSweets; i++)
+		{
+			System.out.println(myArray[i]);
 		}
 		
-		for(String sweets : myArray)
-		{
-			System.out.println(sweets);
-		}
 	}
 
 	private static void inputEight() 
 	{
-		ArrayList<Double> myArray = new ArrayList<Double>();
 		Scanner intInput = new Scanner(System.in);
-		System.out.print("Input eight numbers ");
+		System.out.println("Input eight numbers ");
+		int numbers = intInput.nextInt();
 		
-		while(intInput.hasNextDouble())
+		int[] myArray = new int[numbers];
+		
+		for(int i = 0; i < numbers; i++)
 		{
-			myArray.add(intInput.nextDouble());
+			myArray[i] = intInput.nextInt();
 		}
-		System.out.println(myArray);
+		intInput.close();
 	}
 
 	private static void randomTwoDigit() 
