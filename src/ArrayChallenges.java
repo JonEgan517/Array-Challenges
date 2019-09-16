@@ -5,8 +5,8 @@ public class ArrayChallenges
 	public static void main(String[] args) 
 	{
 		//favoriteSweets();
-		inputEight();
-		//randomTwoDigit();
+		totalOfOddAndEven();
+		randomTwoDigit();
 	}
 
 	private static void favoriteSweets() 
@@ -28,10 +28,9 @@ public class ArrayChallenges
 		{
 			System.out.println(myArray[i]);
 		}
-		
 	}
 
-	private static void inputEight() 
+	private static void totalOfOddAndEven()
 	{
 		Scanner intInput = new Scanner(System.in);
 		System.out.println("Input the number 8. You will be asked to enter some numbers.");
@@ -46,20 +45,22 @@ public class ArrayChallenges
 		}
 		intInput.close();
 	
-		int even = 0; 
-	    int odd = 0;
+		int odd = 0; 
+	    int even = 0;
 	    
 	    for (int i = 0; i < numbers; i++) 
 	    { 
 	        if (i % 2 == 0)
 	        {
-	        	System.out.println(even += myArray[i]);
+	        	odd += myArray[i];
 	        }
 	        else
 	        {
-	        	System.out.println(odd += myArray[i]); 
+	        	even += myArray[i];
 	        }
 	    } 
+	    System.out.println("Total of the Even Numbers is " + even + ".");
+	    System.out.println("Total of the Odd Numbers " + odd + ".");
 	}
 
 	private static void randomTwoDigit() 
