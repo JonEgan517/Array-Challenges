@@ -2,18 +2,19 @@ import java.util.Scanner;
 
 public class ArrayChallenges 
 {
+	static Scanner intInput = new Scanner(System.in);
+	static Scanner stringInput = new Scanner(System.in);
 	public static void main(String[] args) 
 	{
-		//favoriteSweets();
+		favoriteSweets();
 		totalOfOddAndEven();
 		randomTwoDigit();
 	}
 
 	private static void favoriteSweets() 
 	{
-		Scanner stringInput = new Scanner(System.in);
 		System.out.println("How many favorite sweets do you like.");
-		int numberOfSweets = stringInput.nextInt();
+		int numberOfSweets = intInput.nextInt();
 		
 		String[] myArray = new String[numberOfSweets]; 
 		
@@ -22,7 +23,7 @@ public class ArrayChallenges
 			System.out.println("Enter the name of the sweet " +(i+1));
 			myArray[i] = stringInput.next();
 		}
-		stringInput.close();
+			
 		System.out.println("You favorite sweets are ");
 		for(int i = 0; i < numberOfSweets; i++)
 		{
@@ -32,9 +33,9 @@ public class ArrayChallenges
 
 	private static void totalOfOddAndEven()
 	{
-		Scanner intInput = new Scanner(System.in);
 		System.out.println("Input the number 8. You will be asked to enter some numbers.");
-		int numbers = intInput.nextInt();
+		int numbers;
+		numbers = intInput.nextInt();
 		
 		int[] myArray = new int[numbers];
 		
@@ -43,7 +44,7 @@ public class ArrayChallenges
 			System.out.println("Enter number " + (i+1));
 			myArray[i] = intInput.nextInt();
 		}
-		intInput.close();
+		
 	
 		int odd = 0; 
 	    int even = 0;
